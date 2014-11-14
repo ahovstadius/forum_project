@@ -1,0 +1,20 @@
+<h>Welcome to the Random Forum</h>
+
+<form action="/send" method="post">
+  User Name: <input type="text" name="username"><br>
+  Post: <input type="text" name="post">
+  <input type="submit" value="Submit">
+</form>
+
+
+
+<!-- code to display everything from the database -->
+
+<% @items.all.each do |x| %>
+
+    <p> <%= x[:username] %> </p>
+    <p> <%= x[:post] %> </p>
+    </br>
+
+
+<% end %>
